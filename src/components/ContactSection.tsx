@@ -47,9 +47,9 @@ const ContactSection = () => {
 
             <div className="space-y-4">
               {[
-                { icon: Mail, label: "hello@aesthetech.io" },
-                { icon: Phone, label: "+1 (555) 123-4567" },
-                { icon: MapPin, label: "San Francisco, CA" },
+                { icon: Mail, label: "contact2aesthetechsolutions@gmail.com" },
+                { icon: Phone, label: "+91 9764025146" },
+                { icon: MapPin, label: "Pune, India" },
               ].map((item) => (
                 <div key={item.label} className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
@@ -61,7 +61,7 @@ const ContactSection = () => {
             </div>
           </motion.div>
 
-          <motion.form
+          {/* <motion.form
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -93,7 +93,7 @@ const ContactSection = () => {
             <Button variant="hero" size="lg" type="submit" className="w-full">
               Send Message <Send size={16} />
             </Button>
-          </motion.form>
+          </motion.form> */}
         </div>
       </div>
     </section>

@@ -62,8 +62,8 @@ const HeroSection = () => {
                 className="absolute top-8 left-4 glass-card p-5 glow"
               >
                 <Code2 className="text-primary mb-2" size={28} />
-                <p className="text-sm font-display font-semibold">Clean Code</p>
-                <p className="text-xs text-muted-foreground">Scalable architecture</p>
+                <p className="text-sm font-display font-semibold">Web & Apps</p>
+                <p className="text-xs text-muted-foreground">High Performance</p>
               </motion.div>
 
               <motion.div
@@ -72,8 +72,8 @@ const HeroSection = () => {
                 className="absolute top-24 right-0 glass-card p-5 glow"
               >
                 <Layers className="text-primary mb-2" size={28} />
-                <p className="text-sm font-display font-semibold">Pixel Perfect</p>
-                <p className="text-xs text-muted-foreground">Design precision</p>
+                <p className="text-sm font-display font-semibold">Video & Motion</p>
+                <p className="text-xs text-muted-foreground">Visual Storytelling</p>
               </motion.div>
 
               <motion.div
@@ -82,8 +82,8 @@ const HeroSection = () => {
                 className="absolute bottom-16 left-12 glass-card p-5 glow"
               >
                 <Sparkles className="text-primary mb-2" size={28} />
-                <p className="text-sm font-display font-semibold">Innovation</p>
-                <p className="text-xs text-muted-foreground">Future-ready solutions</p>
+                <p className="text-sm font-display font-semibold">3D Design & Visualization</p>
+                <p className="text-xs text-muted-foreground">Digital Immersion</p>
               </motion.div>
 
               {/* Center glow */}

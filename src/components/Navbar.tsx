@@ -2,7 +2,9 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-
+import logoDark from "./images/AestheTechLogo.png";
+import logoLight from "./images/AestheTechLogoLight.png";
+import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
@@ -17,9 +19,23 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#" className="font-display text-xl font-bold tracking-tight">
-          <span className="gradient-text">Aesthe</span>Tech
-        </a>
+       <a href="#" className="font-display text-xl font-bold tracking-tight">
+  
+  {/* Light Theme Logo */}
+  <img
+    src={logoLight}
+    alt="AestheTech Logo"
+    className="h-10 w-auto dark:hidden"
+  />
+
+  {/* Dark Theme Logo */}
+  <img
+    src={logoDark}
+    alt="AestheTech Logo"
+    className="h-10 w-auto hidden dark:block"
+  />
+
+</a>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
@@ -32,6 +48,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+              <ThemeToggle />
           <Button variant="hero" size="sm" asChild>
             <a href="#contact">Get In Touch</a>
           </Button>
