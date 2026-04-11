@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              Turning ideas into scalable digital products through design and technology. We build with aesthetics at the core.
+              We help businesses create powerful digital experiences that fuel growth.
             </p>
 
             <div className="flex flex-wrap gap-4">
