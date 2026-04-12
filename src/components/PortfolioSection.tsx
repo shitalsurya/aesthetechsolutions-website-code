@@ -1,10 +1,13 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import logo from "./images/MantraGuideIcon.png";
+import MantraGuideIcon from "./images/MantraGuideIcon.png";
+import WhatsTodayIcon from "./images/WhatsTodayIcon.png";
 const projects = [
   // { title: "FinFlow Dashboard", category: "Web App", color: "from-primary/20 to-teal-light/10" },
-  { title: "Mantra Guide", category: "Mobile App", color: "from-teal-light/20 to-primary/10" },
-  // { title: "EduVerse Platform", category: "SaaS Product", color: "from-primary/15 to-teal-light/15" },
+  { id:1,title: "Mantra Guide", category: "Mobile App", 
+    color: "from-orange-500/20 to-amber-400/10",titleColor: "text-[#4A2C00]" },
+   { id:2,title: "Whats Today", category: "SaaS Product",
+     color: "from-slate-800/90 to-zinc-900/80",titleColor: "text-slate-300"},
   // { title: "ShopCraft E-commerce", category: "Web Development", color: "from-teal-light/15 to-primary/20" },
   // { title: "TaskZen Productivity", category: "UI/UX Design", color: "from-primary/20 to-teal-light/5" },
   // { title: "DataVault Analytics", category: "Dashboard", color: "from-teal-light/10 to-primary/15" },
@@ -37,23 +40,31 @@ const PortfolioSection = () => (
           >
 <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-background/40 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
 
+
   {/* Top Preview Area */}
   <a
-    href="https://play.google.com/store/apps/details?id=com.shitalsurya.MantraGuide&hl=en_IN"
+    href={project.id === 1 ? "https://play.google.com/store/apps/details?id=com.shitalsurya.MantraGuide&hl=en_IN" : "https://play.google.com/store/apps/details?id=com.shitalsurya.LifeLens&hl=en_IN"}
     target="_blank"
     rel="noopener noreferrer"
     className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center relative`}
   >
     <div className="flex items-center gap-4 px-5 py-4 rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 group-hover:scale-110 transition-transform duration-300">
 
-      {/* App Logo */}
+      {/* App MantraGuideIcon */}
+      {project.id === 1 ? (
+        <img
+          src={MantraGuideIcon}
+          alt={project.title}
+          className="h-10 w-10 object-contain"
+        />
+      ) : 
       <img
-        src={logo}
-        alt="Mantra Guide"
-        className="h-10 w-10 object-contain"
-      />
-  <h3 className="text-lg font-semibold text-primary">
-      Mantra Guide
+          src={WhatsTodayIcon}
+          alt={project.title}
+          className="h-10 w-10 object-contain"
+        />}
+  <h3 className={`text-lg font-semibold ${project.titleColor}`}>
+      {project.title}
     </h3>
       {/* External Link */}
       <ExternalLink
@@ -68,7 +79,7 @@ const PortfolioSection = () => (
   
 
     <p className="text-sm text-muted-foreground">
-      Mobile App
+       {project.id === 1   ? ("Mobile App") : ("Mobile App (Current Project in Development)")}
     </p>
 
     {/* CTA */}

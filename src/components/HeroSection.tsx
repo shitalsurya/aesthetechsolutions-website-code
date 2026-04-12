@@ -22,7 +22,7 @@ const HeroSection = () => {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8">
               <Sparkles size={14} className="text-primary" />
-              <span className="text-xs font-medium text-muted-foreground">Design-Driven Development</span>
+              <span className="text-xs font-medium text-muted-foreground">Where Creativity Meets Technology</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
@@ -32,7 +32,7 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-10 leading-relaxed">
-              Turning ideas into scalable digital products through design and technology. We build with aesthetics at the core.
+              We help businesses create powerful digital experiences that drives growth.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -57,22 +57,22 @@ const HeroSection = () => {
             <div className="relative w-[400px] h-[400px]">
               {/* Floating cards */}
               <motion.div
-                animate={{ y: [-8, 8, -8] }}
+                animate={{ y: [-25, 25, -25] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-8 left-4 glass-card p-5 glow"
               >
                 <Code2 className="text-primary mb-2" size={28} />
                 <p className="text-sm font-display font-semibold">Web & Apps</p>
-                <p className="text-xs text-muted-foreground">High Performance</p>
+                <p className="text-xs text-muted-foreground">Modern Websites and Apps</p>
               </motion.div>
 
               <motion.div
-                animate={{ y: [8, -8, 8] }}
+                animate={{ y: [25, -25, 25] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute top-24 right-0 glass-card p-5 glow"
               >
                 <Layers className="text-primary mb-2" size={28} />
-                <p className="text-sm font-display font-semibold">Video & Motion</p>
+                <p className="text-sm font-display font-semibold">3D Motion & Video Content</p>
                 <p className="text-xs text-muted-foreground">Visual Storytelling</p>
               </motion.div>
 
@@ -82,7 +82,7 @@ const HeroSection = () => {
                 className="absolute bottom-16 left-12 glass-card p-5 glow"
               >
                 <Sparkles className="text-primary mb-2" size={28} />
-                <p className="text-sm font-display font-semibold">3D Design & Visualization</p>
+                <p className="text-sm font-display font-semibold">Graphic Design & Visualization</p>
                 <p className="text-xs text-muted-foreground">Digital Immersion</p>
               </motion.div>
 
