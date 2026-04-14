@@ -23,7 +23,6 @@ const HeroSection = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-border mb-8">
               <Sparkles size={14} className="text-primary" />
               <span className="text-xs font-medium text-muted-foreground">Where Creativity Meets Technology</span>
-              <span className="text-xs font-medium text-muted-foreground">Where Creativity Meets Technology</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">

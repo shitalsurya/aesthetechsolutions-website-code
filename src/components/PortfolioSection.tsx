@@ -4,12 +4,11 @@ import MantraGuideIcon from "./images/MantraGuideIcon.png";
 import WhatsTodayIcon from "./images/WhatsTodayIcon.png";
 const projects = [
   // { title: "FinFlow Dashboard", category: "Web App", color: "from-primary/20 to-teal-light/10" },
-  { id:1,title: "Mantra Guide", category: "Mobile App", 
+  { id:1,title: "Mantra Guide : Spiritual Guide",tagline: "Your Daily Guide to Peace, Prayer & Positivity", category: "Mobile App", 
     color: "from-orange-500/20 to-amber-400/10",titleColor: "text-[#4A2C00]" },
-   { id:2,title: "Whats Today", category: "SaaS Product",
+   { id:2,title: "Whats Today : Smart Calendar", tagline: "Know Every Day's Importance", category: "SaaS Product",
      color: "from-slate-800/90 to-zinc-900/80",titleColor: "text-slate-300"},
-  // { title: "ShopCraft E-commerce", category: "Web Development", color: "from-teal-light/15 to-primary/20" },
-  // { title: "TaskZen Productivity", category: "UI/UX Design", color: "from-primary/20 to-teal-light/5" },
+   //{ title: "TaskZen Productivity", category: "UI/UX Design", color: "from-primary/20 to-teal-light/5" },
   // { title: "DataVault Analytics", category: "Dashboard", color: "from-teal-light/10 to-primary/15" },
 ];
 
@@ -28,7 +27,7 @@ const PortfolioSection = () => (
         </h2>
       </motion.div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, i) => (
           <motion.div
             key={project.title}
@@ -63,9 +62,14 @@ const PortfolioSection = () => (
           alt={project.title}
           className="h-10 w-10 object-contain"
         />}
-  <h3 className={`text-lg font-semibold ${project.titleColor}`}>
+  <div className="ml-3"> {/* Adjust margin as needed for spacing from image */}
+    <h3 className={`text-md font-semibold ${project.titleColor}`}>
       {project.title}
     </h3>
+    <p className={`text-sm font-semibold ${project.titleColor}`}> {/* Style your tagline here */}
+      {project.tagline} 
+    </p>
+  </div>
       {/* External Link */}
       <ExternalLink
         size={22}
